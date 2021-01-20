@@ -1,0 +1,656 @@
+{
+	"info": {
+		"_postman_id": "537755f8-5ef6-4061-b7f6-06bdac0ee649",
+		"name": "Grade Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"item": [
+				{
+					"name": "saveCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"belongsTo\": 10,\r\n  \"emailId\": \"ramu@gmail.com\",\r\n  \"firstName\": \"Ramu\",\r\n  \"gender\": \"Male\",\r\n  \"lastName\": \"S\",\r\n  \"password\": \"pass123\",\r\n  \"role\": \"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/registration/v1/saveCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"registration",
+								"v1",
+								"saveCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"belongsTo\": 7,\r\n  \"emailId\": \"seeta@gmail.com\",\r\n  \"password\": \"bunny123\",\r\n  \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/reg/login/v1/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reg",
+								"login",
+								"v1",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByEmailId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailId\":\"sunny@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/reg/details/v1/findByEmailId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reg",
+								"details",
+								"v1",
+								"findByEmailId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"emailId\": \"sunny@gmail.com\",\r\n  \"password\": \"pass123$\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/reg/password/v1/updatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reg",
+								"password",
+								"v1",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"belongsTo\": \"9\",\r\n  \"emailId\": \"bunny@gmail.com\",\r\n  \"firstName\": \"Bunny\",\r\n  \"gender\": \"Male\",\r\n  \"lastName\": \"S\",\r\n  \"role\": \"teacher\",\r\n  \"id\":\"3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/reg/profile/v1/updateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reg",
+								"profile",
+								"v1",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllStudentDetails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/reg/student/v1/getAllStudentDetails",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"reg",
+								"student",
+								"v1",
+								"getAllStudentDetails"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Marks Updation",
+			"item": [
+				{
+					"name": "updateMarks",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\":1,\r\n    \"teluguMarks\": 80,\r\n    \"englishMarks\": 90,\r\n    \"hindiMarks\" : 75\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/marks/v1/updateMarks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"marks",
+								"v1",
+								"updateMarks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMarksById",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\":1,\r\n    \"belongsTo\":9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/marks/v1/getMarksById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"marks",
+								"v1",
+								"getMarksById"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Api Gate Way",
+			"item": [
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"belongsTo\": 7,\r\n  \"emailId\": \"seeta@gmail.com\",\r\n  \"password\": \"bunny123\",\r\n  \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/student-teacher-login-service/login/v1/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"student-teacher-login-service",
+								"login",
+								"v1",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePassword",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWV0YUBnbWFpbC5jb20iLCJleHAiOjE2MDk4NjczODksImlhdCI6MTYwOTgzMTM4OX0.94TvZJ9a4a3x0KyMvOzkbP-CPEaJVOGBrvb4b0YJ2NA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"emailId\": \"sunny@gmail.com\",\r\n  \"password\": \"sunny123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/student-teacher-forgot-password-service/forgot/v1/updatePassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"student-teacher-forgot-password-service",
+								"forgot",
+								"v1",
+								"updatePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWV0YUBnbWFpbC5jb20iLCJleHAiOjE2MDk4NjczODksImlhdCI6MTYwOTgzMTM4OX0.94TvZJ9a4a3x0KyMvOzkbP-CPEaJVOGBrvb4b0YJ2NA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"belongsTo\": \"8\",\r\n  \"emailId\": \"bunny@gmail.com\",\r\n  \"firstName\": \"Bunny\",\r\n  \"gender\": \"Male\",\r\n  \"lastName\": \"S\",\r\n  \"role\": \"student\",\r\n  \"id\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/student-teacher-profile-update-service/profile/v1/updateProfile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"student-teacher-profile-update-service",
+								"profile",
+								"v1",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMarks",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWV0YUBnbWFpbC5jb20iLCJleHAiOjE2MDk4NjczODksImlhdCI6MTYwOTgzMTM4OX0.94TvZJ9a4a3x0KyMvOzkbP-CPEaJVOGBrvb4b0YJ2NA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\":8,\r\n    \"teluguMarks\": 80,\r\n    \"englishMarks\": 90,\r\n    \"hindiMarks\" : 75\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/student-teacher-marks-data-service/marks/v1/updateMarks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"student-teacher-marks-data-service",
+								"marks",
+								"v1",
+								"updateMarks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMarksById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWV0YUBnbWFpbC5jb20iLCJleHAiOjE2MDk4NjczODksImlhdCI6MTYwOTgzMTM4OX0.94TvZJ9a4a3x0KyMvOzkbP-CPEaJVOGBrvb4b0YJ2NA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"studentId\":1,\r\n    \"belongsTo\":9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/student-teacher-marks-data-service/marks/v1/getMarksById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"student-teacher-marks-data-service",
+								"marks",
+								"v1",
+								"getMarksById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWV0YUBnbWFpbC5jb20iLCJleHAiOjE2MDk4NjczODksImlhdCI6MTYwOTgzMTM4OX0.94TvZJ9a4a3x0KyMvOzkbP-CPEaJVOGBrvb4b0YJ2NA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"belongsTo\": \"7\",\r\n  \"emailId\": \"seelam@gmail.com\",\r\n  \"firstName\": \"Seelam\",\r\n  \"gender\": \"Female\",\r\n  \"lastName\": \"S\",\r\n  \"password\": \"bunny123\",\r\n  \"role\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/student-teacher-registration-service/registration/v1/saveCustomer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"student-teacher-registration-service",
+								"registration",
+								"v1",
+								"saveCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getStudentDetailsByClass",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWV0YUBnbWFpbC5jb20iLCJleHAiOjE2MTA0ODg5OTMsImlhdCI6MTYxMDQ1Mjk5M30.d5plScCRuvxyTnpNtru-2BbHO6awnQEA9kk1ZuVZdWs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"belongsTo\":8,\r\n    \"role\":\"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/student-details-service/student/details/v1/getStudentDetailsByClass",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"student-details-service",
+								"student",
+								"details",
+								"v1",
+								"getStudentDetailsByClass"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProfileById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWV0YUBnbWFpbC5jb20iLCJleHAiOjE2MTEwMTEzNjcsImlhdCI6MTYxMDk3NTM2N30.LBeV_o0aO1dnsOgAE6ELmCwXTL2FvWjG9eTj4rUeN8k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/student-teacher-profile-update-service/profile/v1/getProfileById",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"student-teacher-profile-update-service",
+								"profile",
+								"v1",
+								"getProfileById"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByEmailId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZWV0YUBnbWFpbC5jb20iLCJleHAiOjE2MTEwODQ4MDQsImlhdCI6MTYxMTA0ODgwNH0.7IbaEw5FEtG77LWuzN14KNQk9PX264TwTwS3YnxNTSs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"emailId\":\"sunny@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8765/student-teacher-forgot-password-service/forgot/v1/findByEmailId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"student-teacher-forgot-password-service",
+								"forgot",
+								"v1",
+								"findByEmailId"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student Details Service",
+			"item": [
+				{
+					"name": "getAllStudentDetails",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"belongsTo\":8,\r\n    \"role\":\"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8085/student/details/v1/getStudentDetailsByClass",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"student",
+								"details",
+								"v1",
+								"getStudentDetailsByClass"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

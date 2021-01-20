@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: student-teacher-cloud-config-server  cloud:    config:      server:        git:          uri: https://github.com/full-stack-org/grade-management-system/tree/main/student-teacher-git-config-files
+    
+server:  port: 8888
+  

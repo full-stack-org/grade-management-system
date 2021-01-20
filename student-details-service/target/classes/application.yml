@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: student-details-service
+    
+server:
+  port: 8085

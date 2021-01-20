@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: student-teacher-forgot-password-service
+
+server:  port: 8083

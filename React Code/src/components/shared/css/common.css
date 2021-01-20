@@ -1,0 +1,37 @@
+.footer-common{
+    height: 48px;
+    background-color: silver;
+    padding: 8px;
+    margin-top: 5px;
+    color: black;
+    font-size: 20px;
+    line-height: 3px;
+    text-align: center;
+}
+
+.header-common{
+    height: 48px;
+    background-color: silver;
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 30px;
+    color: black;
+    line-height: 23px;
+    text-align: center;
+}
+
+.comon-background{
+    min-height: 740px;
+}
+
+.common-heading{
+    font-size: 35px;
+}
+
+.error-meessage{
+    font-size: 20px;
+    color: red;
+    margin-top: 3px;;
+    margin-bottom: 3px;
+    text-align: center;
+}

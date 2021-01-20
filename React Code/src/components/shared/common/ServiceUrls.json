@@ -1,0 +1,13 @@
+{
+    "devURI":"http://localhost:8765",
+    "loginURI":"/student-teacher-login-service/login/v1/authenticate",
+    "forgotPasswordURI":"/student-teacher-forgot-password-service/forgot/v1/updatePassword",
+    "registrationURI":"/student-teacher-registration-service/registration/v1/saveCustomer",
+    "updateProfile":"/student-teacher-profile-update-service/profile/v1/updateProfile",
+    "updateMarksURI":"/student-teacher-marks-data-service/marks/v1/updateMarks",
+    "getMarksByIdURI":"/student-teacher-marks-data-service/marks/v1/getMarksById",
+    "getStudentDetailsByClassURI":"/student-details-service/student/details/v1/getStudentDetailsByClass",
+    "logOutURI": "/token/v1/refreshToken",
+    "profileURI": "/student-teacher-profile-update-service/profile/v1/getProfileById",
+    "findByEmailIdURI": "/student-teacher-forgot-password-service/forgot/v1/findByEmailId"
+}

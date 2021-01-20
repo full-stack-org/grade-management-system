@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: student-teacher-login-service
+
+
+server:
+  port: 8080
+  

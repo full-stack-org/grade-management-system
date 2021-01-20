@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: student-teacher-zuul-api-gate-way
+    
+server:
+  port: 8765
+  
+  
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 120000
+
+    
+   
